@@ -1,0 +1,6 @@
+
+make changes to zim.ts - which can be .js but then tsup does not run properly so call it .ts 
+the zim.ts can hold the docs version if desired
+
+in the terminal, run: npm run build 
+this will make the zim.js (node) and zim.mjs (es6) in the dist folder 
