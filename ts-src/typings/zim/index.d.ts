@@ -426,7 +426,7 @@ declare global {
   declare namespace zim {
   
     // UNIQUE - namespace only exports - not added by parser
-    export function makeGlobals(exceptions: string[]): void
+    export function makeGlobals(exceptions?:string[]): void
     // scrollX and scrollY conflict with JavaScript names
     export function scrollX(num?: number, time?: number): number // use scrollX
     export function scrollY(num?: number, time?: number): number // use scrollY
