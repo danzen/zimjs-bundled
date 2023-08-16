@@ -104056,22 +104056,12 @@ https://codepen.io/zimjs/pen/ZqNYxX
   return zim
 })(zim || {})
 
+
+
 // if (!zns) zimplify()
 
-// A. if this actually makes globals then I think this would be good.
-// We import zim as the default.
-// Then to get the rest of ZIM into globals we run zimplify() from the outside
-for (var i = 0; i < globals.length; i++) {
-  WW[globals[i]] = zim[globals[i]] = funcs[i];
-}
 
-// B. If the above does not actually make globals
-// then this option lets them do it with an imported function then run from the outside.
-zim.makeGlobals = function (exceptions) {
-  zimplify(exceptions);
-}
-
-const globals = [
+var globals = [
   "zog",
   "zid",
   "zss",
@@ -104095,8 +104085,50 @@ const globals = [
   "zogd",
   "zimplify",
   "zimify",
+  // "F", // already done
+  // "S",
+  // "W",
+  // "H",
+  // "M",
+  "FIT",
+  "FILL",
+  "FULL",
+  "LEFT",
+  "RIGHT",
+  "CENTER",
+  "MIDDLE",
+  "START",
+  "END",
+  "TOP",
+  "BOTTOM",
+  "HORIZONTAL",
+  "VERTICAL",
+  "BOTH",
+  "GET",
+  "POST",
+  "LOCALSTORAGE",
+  "SOCKET",
+  "TO",
+  "FROM",
+  "UP",
+  "DOWN",
+  "NEXT",
+  "PREV",
+  "AUTO",
+  "DEFAULT",
+  "NONE",
+  "AVE",
+  "SINE",
+  "SQUARE",
+  "TRIANGLE",
+  "SAW",
+  "ZAP",
+  "TAU",
+  "DEG",
+  "RAD",
+  "PHI"
 ]
-const funcs = [
+var vals = [
   zog,
   zid,
   zss,
@@ -104120,37 +104152,81 @@ const funcs = [
   zogd,
   zimplify,
   zimify,
+  // F, // already done
+  // S,
+  // W,
+  // H,
+  // M, 
+  FIT,
+  FILL,
+  FULL,
+  LEFT,
+  RIGHT,
+  CENTER,
+  MIDDLE,
+  START,
+  END,
+  TOP,
+  BOTTOM,
+  HORIZONTAL,
+  VERTICAL,
+  BOTH,
+  GET,
+  POST,
+  LOCALSTORAGE,
+  SOCKET,
+  TO,
+  FROM,
+  UP,
+  DOWN,
+  NEXT,
+  PREV,
+  AUTO,
+  DEFAULT,
+  NONE,
+  AVE,
+  SINE,
+  SQUARE,
+  TRIANGLE,
+  SAW,
+  ZAP,
+  TAU,
+  DEG,
+  RAD,
+  PHI
 ]
 
-export let makeGlobals = zim.makeGlobals
+for (var i = 0; i < globals.length; i++) {
+  WW[globals[i]] = zim[globals[i]] = vals[i];
+}
 
 export default zim
 
-export {
-  zog,
-  zid,
-  zss,
-  zgo,
-  zum,
-  zot,
-  zop,
-  zil,
-  zet,
-  zob,
-  zik,
-  zta,
-  zor,
-  zogg,
-  zogp,
-  zogb,
-  zogr,
-  zogy,
-  zogo,
-  zogl,
-  zogd,
-  zimplify,
-  zimify,
-}
+// export {
+//   zog,
+//   zid,
+//   zss,
+//   zgo,
+//   zum,
+//   zot,
+//   zop,
+//   zil,
+//   zet,
+//   zob,
+//   zik,
+//   zta,
+//   zor,
+//   zogg,
+//   zogp,
+//   zogb,
+//   zogr,
+//   zogy,
+//   zogo,
+//   zogl,
+//   zogd,
+//   zimplify,
+//   zimify,
+// }
 
 WW.zim = zim
 export let chop = zim.chop
