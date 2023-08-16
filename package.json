@@ -1,8 +1,8 @@
 {
   "name": "zimjs",
-  "version": "1.5.0",
-  "main": "./dist/zim.js",
+  "version": "1.5.1",
   "type": "module",
+  "main": "./dist/zim.js",
   "types": "./dist/typings/zim",
   "scripts": {
     "dev": "tsup --watch",
@@ -44,6 +44,6 @@
     "Learn Coding",
     "Teach Coding"
   ],
-  "author": "Dan Zen",
+  "author": "Dr Abstract - Dan Zen",
   "license": "ISC"
 }

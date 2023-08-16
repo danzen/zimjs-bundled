@@ -118,6 +118,8 @@ declare global {
   function zik(arg: any): any
   function zta(item: any): any
   function zor(...items: any[]): any
+  function zimify(obj: createjs.DisplayObject, list?: Boolean): zim.DisplayObject
+  function zimplify(exclude?: string | string[]): void
 
 }
 
@@ -3765,9 +3767,6 @@ declare namespace zim {
   export function parseAudioSprite(audioSpriteData: { resources: string[], spritemap: {} }, outputAudioSprite?: boolean): { src: string, data: {} }
   export function previewAudioSprite(audioSpriteData: {}, numLetters?: number, frame?: Frame): Tabs
   export function svgToBitmap(svg: string | SVGElement, callBack: Function): void
-  export function zimify(obj: createjs.DisplayObject, list?: Boolean): DisplayObject
-  export function zimplify(exclude?: string | string[]): void
-  export function makeGlobals(exclude?: string | string[]): void
   export function fastFrame(cjs: any, stage: Stage | StageGL): Function
   export function addWires({ }): {}
   export function setBlurDetect(): void
