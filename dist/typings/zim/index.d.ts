@@ -337,7 +337,6 @@ declare namespace zim {
     // END ZIM Component Interface
   }
 
-  export function makeGlobals(exceptions?: string[]): void
   export function scrollX(num?: number, time?: number): number
   export function scrollY(num?: number, time?: number): number
 
