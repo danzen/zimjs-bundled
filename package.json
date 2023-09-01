@@ -1,6 +1,6 @@
 {
   "name": "zimjs",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "type": "module",
   "main": "./dist/zim.js",
   "types": "./dist/typings/zim",
@@ -15,7 +15,7 @@
     "esbuild": "0.19.2"
   },
   "dependencies": {
-    "@danzen/createjs": "^1.3.4"    
+    "@danzen/createjs": "^1.4.0"    
   },
   "repository": {
     "type": "git",
