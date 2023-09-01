@@ -1,6 +1,39 @@
+1. ZIM CODE
+Update the normal ZIM with live/index.php 
+Download the zim_test.js file with filezilla 
+and copy from where it says:
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ZIM CODE
+
+All the way down to the bottom to the end of exports.
+And paste over the same code in src/zim.js 
+
+
+2. TYPINGS
+Go to the full editor of the code directory 
+Go to typescript/parser/base.txt make adjustments 
+Run the parser.html file in a browser and paste code into zim_ts/typings/zim/index.ts - look for red error
 make changes to zim.ts - which can be .js but then tsup does not run properly so call it .ts 
+STEPS:
+    Add any new constants or globals to the top
+    COPY from TYPES AND INTERFACES to the end of interfaces -> over into index.ts (overwrite same block)
+    COPY from declare namespace zim to the end -> over into index.ts but leave the existing last line: export = zim 
 the zim.ts can hold the docs version if desired
 
+
+3. BUILDING
 in the terminal, run: npm run build 
 this will make the zim.js (node) and zim.mjs (es6) in the dist folder 
+
+then, run: npm run web
+this will make the combined version
+
+
+4. GITHUB
+// github authentication key: 62WWSCYDQFEVDOOU
+Open GitHub in left menu - tree structure 
+add changes message and commit
+
+
+5. NPM
